@@ -1,0 +1,462 @@
+{
+  "TLD": [
+    {
+      "id": 1,
+      "TLD": "hu",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "TLD": "eu",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "TLD": "com",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "TLD": "net",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "TLD": "org",
+      "order": 5
+    },
+    {
+      "id": 6,
+      "TLD": "biz",
+      "order": 6
+    },
+    {
+      "id": 7,
+      "TLD": "info",
+      "order": 7
+    },
+    {
+      "id": 8,
+      "TLD": "sk",
+      "order": 8
+    },
+    {
+      "id": 10,
+      "TLD": "ro",
+      "order": 10
+    },
+    {
+      "id": 11,
+      "TLD": "si",
+      "order": 11
+    },
+    {
+      "id": 12,
+      "TLD": "at",
+      "order": 12
+    }
+  ],
+  "inputText": [
+    {
+      "id": 1,
+      "inputDomain": "kutya",
+      "inputTld": ""
+    }
+  ],
+  "domain": [
+    {
+      "id": 1,
+      "domain": "kutya.hu",
+      "message": "Foglalt",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 2,
+      "domain": "kutya.eu",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 3,
+      "domain": "kutya.com",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 4,
+      "domain": "kutya.net",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 5,
+      "domain": "kutya.org",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 6,
+      "domain": "kutya.hu",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 7,
+      "domain": "kutya.eu",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 8,
+      "domain": "kutya.com",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 9,
+      "domain": "kutya.net",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 10,
+      "domain": "kutya.org",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 11,
+      "domain": "kutya.com",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 12,
+      "domain": "kutya.hu",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 13,
+      "domain": "kutya.eu",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 14,
+      "domain": "kutya.net",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 15,
+      "domain": "kutya.org",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 16,
+      "domain": "kutya.info",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 17,
+      "domain": "kutya.sk",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 18,
+      "domain": "kutya.si",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 19,
+      "domain": "kutya.ro",
+      "message": "Elérhető",
+      "color": "green",
+      "transfer_price": 1600,
+      "list_price": 1600,
+      "currency": "Ft",
+      "in_cart": false
+    }
+  ],
+  "domainArray": [
+    {
+      "id": 1,
+      "domain": "kutya.hu",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 2,
+      "domain": "kutya.eu",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 3,
+      "domain": "kutya.com",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 4,
+      "domain": "kutya.net",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 5,
+      "domain": "kutya.org",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 6,
+      "domain": "kutya.biz",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 7,
+      "domain": "kutya.info",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 8,
+      "domain": "kutya.sk",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 9,
+      "domain": "kutya.hu",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 10,
+      "domain": "kutya.eu",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 11,
+      "domain": "kutya.com",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 12,
+      "domain": "kutya.net",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 13,
+      "domain": "kutya.org",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 14,
+      "domain": "kutya.biz",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 15,
+      "domain": "kutya.info",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 16,
+      "domain": "kutya.sk",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 17,
+      "domain": "kutya.ro",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 18,
+      "domain": "kutya.si",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    },
+    {
+      "id": 19,
+      "domain": "kutya.at",
+      "message": "",
+      "color": "",
+      "transfer_price": 0,
+      "list_price": 0,
+      "currency": "Ft",
+      "in_cart": false
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "domRegInCart": "kutya.hu",
+      "amount": 1600
+    },
+    {
+      "id": 2,
+      "domRegInCart": "kutya.eu",
+      "amount": 2000
+    }
+  ]
+}
