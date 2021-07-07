@@ -1,0 +1,127 @@
+@import 'colors';
+@import 'fonts';
+
+html{
+  background-color: $white;
+}
+
+body{
+  background: -moz-linear-gradient(top, $wwh-blue-30 0%, $wwh-blue-0 100%);
+  background: -webkit-linear-gradient(top, $wwh-blue-30 0%, $wwh-blue-0 100%);
+  background: linear-gradient(to bottom, $wwh-blue-30 0%, $wwh-blue-0 100%);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$wwh-blue-30-explorer, endColorstr=$wwh-blue-0-explorer, GradientType=0);
+  font-family: 'MarkPro-Book', sans-serif;
+}
+
+.navbar{
+  background: $white;
+
+    &-header{
+      padding: 10px 7px;
+    }
+
+    &-brand{
+      img {
+        margin-left: 6px;
+      }
+    }
+
+  &-wwh{
+    font-family: "MarkPro-Black", sans-serif;
+
+    .navbar-nav{
+      margin-top: 7px;
+
+      .nav-item{
+        .nav-link{
+          color: $nav-item-default-text-color;
+          text-transform: uppercase;
+          padding: 12px 15px;
+          margin: 0;
+          position: relative;
+
+          &:after{
+            content: '';
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: transparent;
+            width: 80px;
+            height: 6px;
+            margin: 0 auto;
+          }
+
+          &:hover, &:active, &:focus{
+            background-color: transparent;
+            color:$wwh-blue;
+
+            &:after{
+              background: $wwh-pink;
+            }
+          }
+        }
+
+        &.active{
+          .nav-link{
+            background-color: transparent;
+            color:$wwh-blue;
+
+            &:after{
+              background: $wwh-pink;
+            }
+          }
+        }
+      }
+
+      .nav-separator{
+        display: block;
+        height: 56px;
+        width: 1px;
+        background: rgba(141, 143, 157, 0.2);
+        margin: 0px 45px 0px 30px;
+      }
+
+      .nav-cart{
+        .btn-wwh{
+          display: block;
+          background:$wwh-purple;
+          background: -moz-linear-gradient(-45deg, $wwh-pink-light 0%, $wwh-purple 200%);
+          background: -webkit-linear-gradient(
+              -45deg
+            , $wwh-pink-light 0%, $wwh-purple 200%);
+          background: linear-gradient(
+              135deg
+            , $wwh-pink-light 0%, $wwh-purple 200%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$wwh-pink-light, endColorstr=$wwh-purple, GradientType=1);
+          border-radius: 10px;
+          padding: 0 3.5px;
+          -webkit-box-shadow: 0 6px 30px 0 $wwh-blue-53;
+          -moz-box-shadow: 0 6px 30px 0 $wwh-blue-53;
+          box-shadow: 0 6px 30px 0 $wwh-blue-53;
+          border: 1px solid transparent;
+
+          &:hover{
+            background: $white;
+            color: $wwh-purple !important;
+            border: 1px solid $wwh-blue-10 !important;
+
+            .default{
+              display: none;
+            }
+
+            .hover{
+              display: block;
+            }
+          }
+
+          .hover{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

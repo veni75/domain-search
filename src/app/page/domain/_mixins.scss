@@ -1,0 +1,8 @@
+@mixin hover-btn {
+    background: #c624ff;
+    background: -moz-linear-gradient(-45deg, #ef3295 0%, #c624ff 200%);
+    background: -webkit-linear-gradient(-45deg, #ef3295 0%, #c624ff 200%);
+    background: linear-gradient(135deg, #ef3295 0%, #c624ff 200%);
+    color: azure;
+    text-transform: uppercase;
+}

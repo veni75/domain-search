@@ -1,1 +1,29 @@
-<p>cart works!</p>
+<div class="cart">
+    <h2 class="cart-h2">Kosár tartalma</h2>
+    <p class="cart-p">Kérdésed van? Hívj: <span class="cart-span">+36 30 475 0766</span></p>
+    <hr class="cart-hr">
+    <input class="cart-input border-0" type="text" placeholder="Kuponkód">
+    <button class="cart-button border-0">Kuponkód beváltása</button>
+    <hr class="cart-hr">
+    <h3 *ngIf="!domRegInBasket" class="cart-empty">Üres a kosarad</h3>
+    <div *ngIf="domRegInBasket">
+        <ul *ngFor="let cart of cartList$|async">
+            <div class="row bg-light w-100 mx-auto cart-card">
+                <div class="col-6">
+                    <p>{{cart.domRegInCart}}</p>
+                    <p>domain regisztráció</p>
+                </div>
+                <div class="col-6">
+                    <p>{{cart.amount}} Ft + ÁFA</p>
+                </div>
+            </div>
+        </ul>
+        <p class="total">Összesen: {{basket}} Ft + ÁFA</p>
+        <hr class="cart-hr">
+        <p class="brutto">Bruttó végösszeg: {{basket*1.27}} Ft</p>
+    </div>
+    <div class="button-further">
+        <button *ngIf="!domRegInBasket" class="cart-further-empty border-0">Tovább</button>
+        <button *ngIf="domRegInBasket" class="cart-further-full border-0">Tovább</button>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+.cart {
+    
+    &-h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 3rem 0 2rem 2rem;
+    }
+    &-p {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    &-hr {
+        margin-right: 11rem;
+        height: 1px;
+        width: 100%;
+    }
+    &-span {
+        font-weight: 900;
+    }
+    &-input {
+        background-color:rgb(231, 231, 231);
+        border-radius: 50px 0px 0px 50px;
+        height: 3rem;
+        padding-left: 20px;
+        width: 50%;
+    }
+    &-button {
+        background-color: #19d08d;
+        border-radius: 0px 50px 50px 0px;
+        color: #fff;
+        height: 3rem;
+        // padding: 0 20px;
+        width: 50%;
+    }
+    &-empty {
+        color:rgb(128, 128, 128);
+        font-size: 1rem;
+        margin: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &-further-empty {
+        background-color: #ffffff;        
+        box-shadow: 0 6px 30px 0 #9cc9b8;
+        border-radius: 50px;
+        color: #b5c7c1;
+        font-size: 1.5rem;
+        height: 4rem;  
+        text-transform: uppercase;
+        width: 100%;
+    }
+    &-card {
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    &-further-full {
+        background-color: #19d08d;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 1.5rem;
+        height: 4rem; 
+        text-transform: uppercase;       
+        width: 100%;
+    }
+    &-total {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    &-brutto {
+        font-size: 1.5rem;
+        font-weight: bold;
+    } 
+    &-button-further {
+        margin: 1rem auto 4rem;
+    }
+}

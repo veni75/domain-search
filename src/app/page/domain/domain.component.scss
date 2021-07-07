@@ -1,0 +1,97 @@
+@import 'mixins';
+@import 'variables';
+
+.bg-gray{
+    background-color: rgb(204, 204, 204);
+    padding: 3rem;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "MarkPro-Black", sans-serif;
+}
+
+.searchInput{
+    height: 4rem;
+    margin: 0 auto;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 20px 34px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+ .search {
+    @include hover-btn;
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$wwh-pink-light, endColorstr=$wwh-purple, GradientType=1); */
+    border-radius: 10px;
+    padding: 0 3.5px;
+    -webkit-box-shadow: 0 6px 30px 0 $wwh-blue-53;
+    -moz-box-shadow: 0 6px 30px 0 $wwh-blue-53;
+    box-shadow: 0 6px 30px 0 $wwh-blue-53;
+    border: 1px solid transparent;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    height: 3rem;
+    padding: 10px 10px;
+    right: 4rem;
+    top: 8.2rem;
+    width: 9rem;
+  }
+
+.badge-danger{
+    border: 1px solid $badge-border;
+    color: $black;
+    margin-left: 1rem;
+}
+
+.btn-reg{
+    background-color: transparent;
+    border: 1px solid $grey;
+    color: $black;
+    width: 14rem;
+}
+
+.btn-reg:hover{
+    background-color: rgb(0, 184, 0);
+}
+
+.badgeTrue{
+    border: 1px solid rgb(0, 128, 0);
+    color: $black;
+    margin-left: 1rem;
+}
+
+.badgeFalse{
+    border: 1px solid $badge-border;
+    color: $black;
+    margin-left: 1rem;
+}
+
+.hover {
+    
+    &-megse {
+        border: 1px solid $grey;
+        text-transform: uppercase;
+        width: 12rem;
+        &:hover {
+            @include hover-btn;
+        }
+    }
+    &-atreg {
+        border: 1px solid $grey;
+        text-transform: uppercase;
+        width: 12rem;
+        &:hover {
+            background-color:$hover-green;
+            color: $white;
+        }
+    }
+    
+}

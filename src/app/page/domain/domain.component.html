@@ -1,1 +1,193 @@
-<p>domain works!</p>
+<div class="container-fluid">
+    <app-steps></app-steps>
+    <div class="row">
+      <div class="col-lg-8">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" (click)="domainSearch()">Domain kereső</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" (click)="myDomain()">Van már domainem</a>
+  
+          </li>
+        </ul>
+        <div *ngIf="chooseDomain" class="bg-gray position-relative rounded-3">
+          <h2 class="mb-5">Válassz domaint!</h2>
+          <form #domainForm="ngForm" (ngSubmit)="search(domainForm)">
+            <div class="mb-3">
+              <input type="text" class="border-0 rounded-pill searchInput" id="domain" name="domain"
+                aria-describedby="domain" [(ngModel)]="inputText" pattern="[a-z.]{2,}" required>
+              <button [disabled]="domainForm.invalid" type="submit"
+                class="btn border-0 rounded-pill position-absolute search">Keresés</button>
+            </div>
+          </form>
+        </div>
+  
+        <div *ngIf="!chooseDomain" class="bg-gray position-relative rounded-3">
+          <h2 class="mb-5">Domainem:</h2>
+          <form #isdomainForm="ngForm" (ngSubmit)="isDomainToCart(isdomainForm)">
+            <div class="mb-3">
+              <input type="text" class="border-0 rounded-pill searchInput" id="isdomain" name="isdomain"
+                aria-describedby="isdomain" [(ngModel)]="isDomain" pattern="[a-z.]{2,}" required>
+              <button [disabled]="isdomainForm.invalid" type="submit"
+                class="btn border-0 rounded-pill position-absolute search">Kosárba</button>
+            </div>
+          </form>
+        </div>
+  
+  
+        <div *ngIf="showCard">
+          
+          <div *ngIf="isNotTld" class="card border border-success my-3 w-100">
+            <div class="card-body">
+              <p class="card-text text-success fw-bold d-inline">{{inputDomain}}.{{inputTLD}}</p>
+              <span class="badge rounded-pill text-danger badge-danger">Ezzel a tld-vel sajnos még nem tudsz nálunk
+                domain-t regisztrálni.</span>
+            </div>
+          </div>
+          <div *ngIf="matchTld" class="card border border-success my-3 w-100">
+            <div class="card-body">
+              <p *ngIf="!(domain1$ | async)" class="card-text text-success fw-bold d-inline">{{inputDomain}}.{{inputTLD}}</p>
+              <ul *ngIf=" !(domain1$ | async) ">
+                <app-loading-card></app-loading-card>
+              </ul>
+              <div class="col-12 col-lg-6">
+                <div *ngIf=" (domain1$ | async)as domain ">
+                  <p class="card-text d-inline">{{domain.domain}}</p>
+                  <span *ngIf="domain.message==='Elérhető'" class="badge rounded-pill badgeTrue">Elérhető</span>
+                  <span *ngIf="domain.message==='Foglalt'" class="badge rounded-pill badgeFalse">Foglalt</span>
+                  <p *ngIf="domain.message==='Elérhető'" class="card-text">Regisztráció ára: {{domain.list_price}}
+                    Ft +
+                    ÁFA / év</p>
+                  <p *ngIf="domain.message==='Foglalt'" class="card-text">Átregisztráció ára:
+                    {{domain.transfer_price}} Ft
+                    + ÁFA / év</p>
+                </div>
+  
+              </div>
+              <div class="col-12 col-lg-6" *ngIf=" (domain1$ | async) as domain">
+                <a *ngIf="domain.message==='Elérhető'" class="btn rounded-pill btn-reg"
+                  (click)="plusBasket($event,true)">Regisztráció</a>
+                <a *ngIf="domain.message==='Foglalt'" class="btn rounded-pill btn-reg" (click)="plusBasket($event,false)"
+                  data-bs-toggle="modal" data-bs-target="#registration">Átregisztráció</a>
+  
+              </div>
+  
+            </div>
+          </div>
+          <div *ngIf="!isNotTld && !matchTld">
+  
+            <ul *ngFor="let domain of domainArray|sliceDomain:clickNumber">
+              <div class="card mt-3 mb-3 w-100">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <p class="card-text d-inline">{{domain}}</p>
+                    </div>
+                    <div class="col-12 col-lg-6"></div>
+                    <div class="col-12 col-lg-6">
+                      <div *ngIf=" (domain1$ | async)as domain ">
+                        <p class="card-text d-inline">{{domain.domain}}</p>
+                        <span *ngIf="domain.message==='Elérhető'" class="badge rounded-pill badgeTrue">Elérhető</span>
+                        <span *ngIf="domain.message==='Foglalt'" class="badge rounded-pill badgeFalse">Foglalt</span>
+                        <p *ngIf="domain.message==='Elérhető'" class="card-text">Regisztráció ára: {{domain.list_price}}
+                          Ft +
+                          ÁFA / év</p>
+                        <p *ngIf="domain.message==='Foglalt'" class="card-text">Átregisztráció ára:
+                          {{domain.transfer_price}} Ft
+                          + ÁFA / év</p>
+                      </div>
+  
+                    </div>
+                    <div class="col-12 col-lg-6" *ngIf=" (domain1$ | async) as domain">
+                      <a *ngIf="domain.message==='Elérhető'" class="btn rounded-pill btn-reg"
+                        (click)="plusBasket($event,true)">Regisztráció</a>
+                      <a *ngIf="domain.message==='Foglalt'" class="btn rounded-pill btn-reg"
+                        (click)="plusBasket($event,false)" data-bs-toggle="modal"
+                        data-bs-target="#registration">Átregisztráció</a>
+  
+                    </div>
+  
+                  </div>
+                </div>
+              </div>
+            </ul>
+  
+            <!-- <ul *ngFor="let domain of domainList$ | async ">
+                <app-domain-card [domain]=domain (domainInfo)="domainInfo($event)" (basketInfo)="basketInfo($event)">
+                </app-domain-card>
+              </ul> -->
+          </div>
+  
+          <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="moreDomain()">Több domain
+            betöltése</button>
+        </div>
+      </div>
+  
+      <!-- kosár eleje -->
+      <div class="col-lg-4 rounded-3 bg-white">
+  
+        <app-cart [domRegInBasket]="domRegInBasket"></app-cart>
+      </div>
+      <!--  <div class="col-lg-4 rounded-3 bg-white">
+        <div class="cart">
+          <h2 class="cart-h2">Kosár tartalma</h2>
+          <p class="cart-p">Kérdésed van? Hívj: <span class="cart-span">+36 30 475 0766</span></p>
+          <hr class="cart-hr">
+          <input class="cart-input border-0" type="text" placeholder="Kuponkód">
+          <button class="cart-button border-0">Kuponkód beváltása</button>
+          <hr class="cart-hr">
+          <h3 *ngIf="!domRegInBasket" class="cart-empty">Üres a kosarad</h3>
+          <div *ngIf="domRegInBasket">
+            <div class="row bg-light w-100 mx-auto cart-card">
+              <div class="col-6">
+                <p>{{domRegInBasket}}</p>
+                <p>domain regisztráció</p>
+              </div>
+              <div class="col-6">
+                <p>{{basket}} Ft + ÁFA</p>
+              </div>
+            </div>
+            <p class="cart-total">Összesen: {{basket}} Ft + ÁFA</p>
+            <hr class="cart-hr">
+            <p class="cart-brutto">Bruttó végösszeg: {{basket*1.27}} Ft</p>
+          </div>
+          <div class="cart-button-further">
+            <button *ngIf="!domRegInBasket" class="cart-further-empty border-0">Tovább</button>
+            <button *ngIf="domRegInBasket" class="cart-further-full border-0">Tovább</button>
+          </div>
+        </div>
+      </div>  -->
+      <!--cart end -->
+  
+  
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" id="registration">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registrationLabel">Átregisztrálás</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger" role="alert">
+            Figyelem! A kiválasztott domain már be van jegyezve.
+          </div>
+  
+          <p>Átregisztrálni csak akkor lehet, ha a domain a tulajdonodban van, vagy a jelenlegi tulajdonossal már
+            megállapodtál a domain átadásáról.</p>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="declaration" (change)="changeEvent($event)">
+            <label class="form-check-label" for="declaration">A domain tulajdonosa vagyok vagy a jelenlegi tulajdonos
+              hozzájárul az átregisztráláshoz</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn rounded-pill hover-megse" data-bs-dismiss="modal">Mégsem</button>
+          <button [disabled]="toggleBool" (click)="modal()" data-bs-dismiss="modal" type="button"
+            class="btn rounded-pill hover-atreg">Átregisztrálás</button>
+        </div>
+      </div> <!-- modal content end -->
+    </div>
+  </div> <!-- modal end -->
